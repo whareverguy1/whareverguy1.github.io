@@ -135,7 +135,53 @@
     height: 100%;
     border-radius: 6px;
     transition: width 0.5s ease-in-out;
-  }     
+  }  
+    /* 7. Light Mode Overrides */
+  body.light-mode {
+    background-color: #f6f8fa;
+    color: #24292f;
+  }
+
+  body.light-mode .card {
+    background: #ffffff;
+    border-color: #d0d7de;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  }
+
+  body.light-mode h1, 
+  body.light-mode h2, 
+  body.light-mode .projects-section h2, 
+  body.light-mode .project-card h3 {
+    color: #0969da; /* Classic bright blue for light mode links/headers */
+  }
+
+  body.light-mode p {
+    color: #57606a;
+  }
+
+  body.light-mode .skills-container .badge {
+    background-color: #afb8c133 !important;
+    color: #0969da !important;
+    border-color: #d0d7de !important;
+  }
+
+  body.light-mode .project-card,
+  body.light-mode .stats-container,
+  body.light-mode #output-box {
+    background-color: #f6f8fa;
+    border-color: #d0d7de;
+  }
+
+  body.light-mode .progress-bar-bg {
+    background-color: #eaeff4;
+    border-color: #d0d7de;
+  }
+
+  body.light-mode #theme-toggle {
+    background-color: #f6f8fa;
+    color: #24292f;
+    border-color: #d0d7de;
+  }    
   @media (max-width: 480px) {
     body {
         padding: 20px 10px;
@@ -150,8 +196,12 @@
     </style>
 </head>
 <body>
-
     <div class="card">
+        <div style="text-align: right; margin-bottom: 15px;">
+  <button id="theme-toggle" onclick="toggleTheme()" style="padding: 8px 14px; background-color: #21262d; color: #c9d1d9; border: 1px solid #30363d; border-radius: 20px; font-weight: bold; cursor: pointer; font-size: 0.85rem;">
+    ☀️ Light Mode
+  </button>
+</div>
         <h1>Hi, I'm Christian mwala</h1>
         <p>Grade Eight student in Kenya, aspiring software engineer and competitive Bloodstrike player</p>
         <p><strong>Skills in progress:</strong></p>
@@ -268,6 +318,20 @@ def run_calculator(event):
 
 </div>
     </div>
-
+<script>
+    function toggleTheme() {
+      // Toggle the .light-mode class on the body element
+      document.body.classList.toggle('light-mode');
+      
+      const button = document.getElementById('theme-toggle');
+      
+      // Update the button text depending on which mode is active
+      if (document.body.classList.contains('light-mode')) {
+        button.innerHTML = "🌙 Dark Mode";
+      } else {
+        button.innerHTML = "☀️ Light Mode";
+      }
+    }
+  </script>
 </body>
 </html>
