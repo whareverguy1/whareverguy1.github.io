@@ -53,6 +53,46 @@
     font-weight: bold;
     border: 1px solid #30363d;
   }
+        
+  .projects-section {
+    margin-top: 35px;
+    border-top: 1px solid #30363d;
+    padding-top: 20px;
+    text-align: left;
+  }
+
+  .projects-section h2 {
+    color: #58a6ff;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .project-card {
+    background-color: #0d1117;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #30363d;
+  }
+
+  .project-card h3 {
+    color: #58a6ff;
+    margin-top: 0;
+  }
+
+  pre {
+    background-color: #161b22;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+    overflow-x: auto;
+  }
+
+  code {
+    font-family: 'Courier New', Courier, monospace;
+    color: #79c0ff;
+    font-size: 0.9rem;
+  }
   @media (max-width: 480px) {
     body {
         padding: 20px 10px;
@@ -78,6 +118,25 @@
           <span class="badge">Hardware Troubleshooting</span>
     </div>
     <p style="margin-top: 25px;">Contact: christianmwala0012@gmail.com</p>
+        <div class="projects-section">
+    <h2>My Projects</h2>
+    
+    <div class="project-card">
+      <h3>🐍 Python Age Calculator (2026)</h3>
+      <p>A custom command-line program built in Python that takes user input, performs integer conversions, and utilizes conditional <code>if/elif/else</code> logic to dynamically greet the user based on their age group.</p>
+      
+      <h4>The Code:</h4>
+      <pre><code>current_year = 2026
+age = current_year - birth_year
+
+if age &lt; 13:
+    print("You are still a kid!")
+elif age &gt;= 13 and age &lt;= 19:
+    print("You are a fellow teenager! Keep coding.")
+else:
+    print("Welcome, adult!")</code></pre>
+    </div>
+  </div>
     </div>
     <div class="card">
         <h2>My Projects</h2>
