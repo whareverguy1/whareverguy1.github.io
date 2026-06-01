@@ -95,6 +95,47 @@
     color: #79c0ff;
     font-size: 0.9rem;
   }
+   
+  .stats-container {
+    background-color: #0d1117;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #30363d;
+    text-align: left;
+    margin-top: 15px;
+  }
+
+  .stat-row {
+    margin-bottom: 18px;
+  }
+
+  .stat-row:last-child {
+    margin-bottom: 0; 
+  }
+
+  .stat-labels {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+    color: #c9d1d9;
+  }
+
+  .progress-bar-bg {
+    background-color: #21262d;
+    width: 100%;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #30363d;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    border-radius: 6px;
+    transition: width 0.5s ease-in-out;
+  }     
   @media (max-width: 480px) {
     body {
         padding: 20px 10px;
@@ -181,7 +222,51 @@ def run_calculator(event):
         <li><strong>Upcoming chess grandmaster[elo-713]</strong></li>
         <li><strong>Enjoy's photography and videography</strong></li>
         <li><strong>PRO Bloodstrike player[fps shooter game]</strong></li>
-        </ol>    
+        </ol>
+        <h2 style="margin-top: 35px; color: #58a6ff; font-size: 1.6rem;">My Skill & Rank Dashboard</h2>
+<div class="stats-container">
+
+  <div class="stat-row">
+    <div class="stat-labels">
+      <span>♟️ Chess Elo</span>
+      <span>713 / 1500</span>
+    </div>
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" style="width: 47%; background-color: #f1c40f;"></div>
+    </div>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat-labels">
+      <span>🎮 Bloodstrike Rank</span>
+      <span>Legend Rank</span>
+    </div>
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" style="width: 90%; background-color: #e74c3c;"></div>
+    </div>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat-labels">
+      <span>🌍 Swahili & English Literature</span>
+      <span>Advanced</span>
+    </div>
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" style="width: 85%; background-color: #2ecc71;"></div>
+    </div>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat-labels">
+      <span>🇩🇪 🇯🇵 German & Japanese</span>
+      <span>Learning</span>
+    </div>
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" style="width: 25%; background-color: #3498db;"></div>
+    </div>
+  </div>
+
+</div>
     </div>
 
 </body>
