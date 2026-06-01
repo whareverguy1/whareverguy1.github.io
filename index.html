@@ -2,6 +2,8 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
     <title>My Developer Portfolio</title>
     <style>
   body { 
@@ -120,23 +122,56 @@
     <p style="margin-top: 25px;">Contact: christianmwala0012@gmail.com</p>
         <div class="projects-section">
     <h2>My Projects</h2>
-    
     <div class="project-card">
-      <h3>🐍 Python Age Calculator (2026)</h3>
-      <p>A custom command-line program built in Python that takes user input, performs integer conversions, and utilizes conditional <code>if/elif/else</code> logic to dynamically greet the user based on their age group.</p>
-      
-      <h4>The Code:</h4>
-      <pre><code>current_year = 2026
-age = current_year - birth_year
-
-if age &lt; 13:
-    print("You are still a kid!")
-elif age &gt;= 13 and age &lt;= 19:
-    print("You are a fellow teenager! Keep coding.")
-else:
-    print("Welcome, adult!")</code></pre>
-    </div>
+  <h3>🐍 Live Python Age Calculator</h3>
+  <p>Type your birth year below and click the button to run my Python script live in your browser!</p>
+  
+  <input type="text" id="user-name" placeholder="Enter your name" style="padding: 8px; border-radius: 6px; border: 1px solid #30363d; background: #0d1117; color: #fff; margin-bottom: 10px; width: 80%;">
+  <br>
+  <input type="number" id="birth-year" placeholder="Enter birth year (e.g., 2012)" style="padding: 8px; border-radius: 6px; border: 1px solid #30363d; background: #0d1117; color: #fff; margin-bottom: 10px; width: 80%;">
+  <br>
+  <button py-click="run_calculator" style="padding: 10px 20px; background-color: #238636; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">Run Python Code</button>
+  
+  <div id="output-box" style="margin-top: 15px; padding: 15px; background: #0d1117; border-radius: 8px; border: 1px solid #30363d; font-family: monospace; color: #79c0ff; text-align: left; white-space: pre-wrap;">
+    Terminal Output Will Appear Here...
   </div>
+
+  <script type="py">
+from user_interface import document
+
+def run_calculator(event):
+    # 1. Grab the inputs from the HTML text boxes
+    name = document.querySelector("#user-name").value
+    birth_year_str = document.querySelector("#birth-year").value
+    output_div = document.querySelector("#output-box")
+    
+    # Validation check to make sure they typed something
+    if not name or not birth_year_str:
+        output_div.innerText = "Error: Please enter both your name and birth year!"
+        return
+        
+    birth_year = int(birth_year_str)
+    current_year = 2026
+    age = current_year - birth_year
+    
+    # 2. Build the output text using your logic blocks
+    result = f"---------------------------------------\n"
+    result += f"Hello, {name}! Welcome to the program.\n"
+    result += f"Based on your birth year, you are turning {age} years old in 2026!\n"
+    
+    if age < 13:
+        result += "You are still a kid! Enjoy it!\n"
+    elif age >= 13 and age <= 19:
+        result += "Awesome, you are a fellow teenager! Keep up the coding grind.\n"
+    else:
+        result += "Welcome, adult! Thanks for checking out my program.\n"
+        
+    result += f"---------------------------------------"
+    
+    # 3. Print it directly into the HTML output box
+    output_div.innerText = result
+  </script>
+</div>
     </div>
     <div class="card">
         <h2>My Projects</h2>
