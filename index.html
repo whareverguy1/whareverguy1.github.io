@@ -152,7 +152,7 @@
   body.light-mode h2, 
   body.light-mode .projects-section h2, 
   body.light-mode .project-card h3 {
-    color: #0969da; /* Classic bright blue for light mode links/headers */
+    color: #0969da;
   }
 
   body.light-mode p {
@@ -181,6 +181,62 @@
     background-color: #f6f8fa;
     color: #24292f;
     border-color: #d0d7de;
+  } 
+  .connect-section {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .connect-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+  }
+
+  .email-btn {
+    background-color: #238636;
+    color: #ffffff;
+  }
+
+  .email-btn:hover {
+    background-color: #2ea043;
+  }
+
+  .github-btn {
+    background-color: #21262d;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+  }
+
+  .github-btn:hover {
+    background-color: #30363d;
+    border-color: #8b949e;
+  }
+
+  body.light-mode .email-btn {
+    background-color: #1a7f37;
+  }
+  
+  body.light-mode .email-btn:hover {
+    background-color: #11662a;
+  }
+
+  body.light-mode .github-btn {
+    background-color: #24292f;
+    color: #ffffff;
+    border: none;
+  }
+
+  body.light-mode .github-btn:hover {
+    background-color: #1f2328;
   }    
   @media (max-width: 480px) {
     body {
@@ -210,7 +266,14 @@
           <span class="badge">HTML / CSS</span>
           <span class="badge">Hardware Troubleshooting</span>
     </div>
-    <p style="margin-top: 25px;">Contact: christianmwala0012@gmail.com</p>
+    <div class="connect-section">
+  <a href="mailto:christianmwala0012@gmail.com" class="connect-btn email-btn">
+    📧 Send an Email
+  </a>
+  <a href="https://github.com/" target="_blank" class="connect-btn github-btn">
+    💻 View GitHub Profile
+  </a>
+</div>
         <div class="projects-section">
     <h2>My Projects</h2>
     <div class="project-card">
