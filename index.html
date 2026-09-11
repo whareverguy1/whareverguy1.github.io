@@ -48,7 +48,7 @@
 
  .skills-container .badge {
     background-color: #21262d;
-    color: #58a6ff; !important;
+    color: #58a6ff;
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -75,6 +75,11 @@
     padding: 20px;
     border-radius: 12px;
     border: 1px solid #30363d;
+    margin-bottom: 20px;
+  }
+
+  .project-card:last-child {
+    margin-bottom: 0;
   }
 
   .project-card h3 {
@@ -136,7 +141,8 @@
     border-radius: 6px;
     transition: width 0.5s ease-in-out;
   }  
-    /* 7. Light Mode Overrides */
+    
+  /* Light Mode Overrides */
   body.light-mode {
     background-color: #f6f8fa;
     color: #24292f;
@@ -182,6 +188,7 @@
     color: #24292f;
     border-color: #d0d7de;
   } 
+
   .connect-section {
     margin-top: 30px;
     display: flex;
@@ -238,12 +245,13 @@
   body.light-mode .github-btn:hover {
     background-color: #1f2328;
   }    
+
   @media (max-width: 480px) {
     body {
         padding: 20px 10px;
     }
     .card {
-        padding:20px;
+        padding: 20px;
     }
       h1 {
           font-size: 1.8rem;
@@ -254,89 +262,143 @@
 <body>
     <div class="card">
         <div style="text-align: right; margin-bottom: 15px;">
-  <button id="theme-toggle" onclick="toggleTheme()" style="padding: 8px 14px; background-color: #21262d; color: #c9d1d9; border: 1px solid #30363d; border-radius: 20px; font-weight: bold; cursor: pointer; font-size: 0.85rem;">
-    ☀️ Light Mode
-  </button>
-</div>
-        <h1>Hi, I'm Christian mwala</h1>
+            <button id="theme-toggle" onclick="toggleTheme()" style="padding: 8px 14px; background-color: #21262d; color: #c9d1d9; border: 1px solid #30363d; border-radius: 20px; font-weight: bold; cursor: pointer; font-size: 0.85rem;">
+                ☀️ Light Mode
+            </button>
+        </div>
+        
+        <h1>Hi, I'm Christian Mwala</h1>
         <p>Grade Eight student in Kenya, aspiring software engineer and competitive Bloodstrike player</p>
         <p><strong>Skills in progress:</strong></p>
+        
         <div class="skills-container">
           <span class="badge">Python</span>
           <span class="badge">HTML / CSS</span>
           <span class="badge">Hardware Troubleshooting</span>
-    </div>
-    <div class="connect-section">
-  <a href="mailto:christianmwala0012@gmail.com" class="connect-btn email-btn">
-    📧 Send an Email
-  </a>
-  <a href="https://github.com/" target="_blank" class="connect-btn github-btn">
-    💻 View GitHub Profile
-  </a>
-</div>
-        <div class="projects-section">
-    <h2>My Projects</h2>
-    <div class="project-card">
-  <h3>🐍 Live Python Age Calculator</h3>
-  <p>Type your birth year below and click the button to run my Python script live in your browser!</p>
-  
-  <input type="text" id="user-name" placeholder="Enter your name" style="padding: 8px; border-radius: 6px; border: 1px solid #30363d; background: #0d1117; color: #fff; margin-bottom: 10px; width: 80%;">
-  <br>
-  <input type="number" id="birth-year" placeholder="Enter birth year (e.g., 2012)" style="padding: 8px; border-radius: 6px; border: 1px solid #30363d; background: #0d1117; color: #fff; margin-bottom: 10px; width: 80%;">
-  <br>
-  <button py-click="run_calculator" style="padding: 10px 20px; background-color: #238636; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">Run Python Code</button>
-  
-  <div id="output-box" style="margin-top: 15px; padding: 15px; background: #0d1117; border-radius: 8px; border: 1px solid #30363d; font-family: monospace; color: #79c0ff; text-align: left; white-space: pre-wrap;">
-    Terminal Output Will Appear Here...
-      <!-- Project Card: Weather Dashboard -->
-<div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition">
-    <div>
-        <div class="flex justify-between items-center mb-3">
-            <h3 class="text-xl font-bold text-slate-100">🌤️ Modern Weather Dashboard</h3>
-            <span class="text-xs px-2.5 py-1 bg-blue-950/60 text-blue-400 border border-blue-800/50 rounded-full font-medium">Featured</span>
         </div>
-        <p class="text-slate-400 text-sm mb-4">
-            A feature-rich weather application providing real-time conditions, 5-day forecasts, geolocation support, dynamic metrics, and persistent local storage favorites.
-        </p>
-        <!-- Tech Stack Tags -->
-        <div class="flex flex-wrap gap-2 mb-6">
-            <span class="text-xs px-2 py-1 bg-slate-800 text-slate-300 rounded-lg">HTML5</span>
-            <span class="text-xs px-2 py-1 bg-slate-800 text-slate-300 rounded-lg">Tailwind CSS</span>
-            <span class="text-xs px-2 py-1 bg-slate-800 text-slate-300 rounded-lg">JavaScript</span>
-            <span class="text-xs px-2 py-1 bg-slate-800 text-slate-300 rounded-lg">OpenWeatherMap API</span>
-        </div>
-    </div>
-    <!-- Action Links -->
-    <div class="flex gap-3 pt-4 border-t border-slate-800">
-        <a 
-            href="https://whareverguy1.github.io/weather-app/" 
-            target="_blank" 
-            class="flex-1 text-center py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-sm font-medium transition"
-        >
-            Live Demo
-        </a>
-        <a 
-            href="https://github.com/whareverhuy1/weather-app" 
-            target="_blank" 
-            class="flex-1 text-center py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 rounded-xl text-sm font-medium transition"
-        >
-            GitHub Code
-        </a>
-    </div>
-</div>
-  </div>
         
+        <div class="connect-section">
+            <a href="mailto:christianmwala0012@gmail.com" class="connect-btn email-btn">
+                📧 Send an Email
+            </a>
+            <a href="https://github.com/" target="_blank" class="connect-btn github-btn">
+                💻 View GitHub Profile
+            </a>
+        </div>
 
-  <script type="py">
+        <!-- Projects Section -->
+        <div class="projects-section">
+            <h2>My Projects</h2>
+            
+            <!-- Project 1: Live Python Age Calculator -->
+            <div class="project-card">
+                <h3>🐍 Live Python Age Calculator</h3>
+                <p>Type your birth year below and click the button to run my Python script live in your browser!</p>
+                
+                <input type="text" id="user-name" placeholder="Enter your name" style="padding: 8px; border-radius: 6px; border: 1px solid #30363d; background: #0d1117; color: #fff; margin-bottom: 10px; width: 80%;">
+                <br>
+                <input type="number" id="birth-year" placeholder="Enter birth year (e.g., 2012)" style="padding: 8px; border-radius: 6px; border: 1px solid #30363d; background: #0d1117; color: #fff; margin-bottom: 10px; width: 80%;">
+                <br>
+                <button py-click="run_calculator" style="padding: 10px 20px; background-color: #238636; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">Run Python Code</button>
+                
+                <div id="output-box" style="margin-top: 15px; padding: 15px; background: #0d1117; border-radius: 8px; border: 1px solid #30363d; font-family: monospace; color: #79c0ff; text-align: left; white-space: pre-wrap;">
+                    Terminal Output Will Appear Here...
+                </div>
+            </div>
+
+            <!-- Project 2: Modern Weather Dashboard -->
+            <div class="project-card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                    <h3 style="margin: 0; color: #58a6ff; font-size: 1.15rem;">🌤️ Modern Weather Dashboard</h3>
+                    <span style="font-size: 0.75rem; padding: 4px 10px; background-color: rgba(13, 40, 80, 0.6); color: #58a6ff; border: 1px solid #1f6feb; border-radius: 9999px; font-weight: 500;">Featured</span>
+                </div>
+                <p style="color: #8b949e; font-size: 0.95rem; margin-bottom: 15px;">
+                    A feature-rich weather application providing real-time conditions, 5-day forecasts, geolocation support, dynamic metrics, and persistent local storage favorites.
+                </p>
+                <!-- Tech Stack Tags -->
+                <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px;">
+                    <span style="font-size: 0.75rem; padding: 4px 8px; background-color: #21262d; color: #c9d1d9; border: 1px solid #30363d; border-radius: 6px;">HTML5</span>
+                    <span style="font-size: 0.75rem; padding: 4px 8px; background-color: #21262d; color: #c9d1d9; border: 1px solid #30363d; border-radius: 6px;">Tailwind CSS</span>
+                    <span style="font-size: 0.75rem; padding: 4px 8px; background-color: #21262d; color: #c9d1d9; border: 1px solid #30363d; border-radius: 6px;">JavaScript</span>
+                    <span style="font-size: 0.75rem; padding: 4px 8px; background-color: #21262d; color: #c9d1d9; border: 1px solid #30363d; border-radius: 6px;">OpenWeatherMap API</span>
+                </div>
+                <!-- Action Links -->
+                <div style="display: flex; gap: 10px; padding-top: 15px; border-top: 1px solid #30363d;">
+                    <a href="https://whareverguy1.github.io/weather-app/" target="_blank" style="flex: 1; text-align: center; padding: 8px 12px; background-color: #238636; color: white; border-radius: 8px; font-size: 0.85rem; font-weight: bold; text-decoration: none;">
+                        Live Demo
+                    </a>
+                    <a href="https://github.com/whareverhuy1/weather-app" target="_blank" style="flex: 1; text-align: center; padding: 8px 12px; background-color: #21262d; color: #c9d1d9; border: 1px solid #30363d; border-radius: 8px; font-size: 0.85rem; font-weight: bold; text-decoration: none;">
+                        GitHub Code
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>some random knowledge i have</h2>
+        <ol style="text-align: left; margin-left: 20px; line-height: 1.8; color: #8b949e;">
+            <li><strong>Hardware Guide:</strong> I know my way around an HP EliteBook 840 G3!</li>
+            <li><strong>Can effectively fix and debug a phone</strong></li>
+            <li><strong>Upcoming chess grandmaster [elo: 713]</strong></li>
+            <li><strong>Enjoys photography and videography</strong></li>
+            <li><strong>PRO Bloodstrike player [FPS shooter game]</strong></li>
+        </ol>
+        
+        <h2 style="margin-top: 35px; color: #58a6ff; font-size: 1.6rem;">My Skill & Rank Dashboard</h2>
+        <div class="stats-container">
+            <div class="stat-row">
+                <div class="stat-labels">
+                    <span>♟️ Chess Elo</span>
+                    <span>713 / 1500</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: 47%; background-color: #f1c40f;"></div>
+                </div>
+            </div>
+
+            <div class="stat-row">
+                <div class="stat-labels">
+                    <span>🎮 Bloodstrike Rank</span>
+                    <span>Legend Rank</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: 90%; background-color: #e74c3c;"></div>
+                </div>
+            </div>
+
+            <div class="stat-row">
+                <div class="stat-labels">
+                    <span>🌍 Swahili & English Literature</span>
+                    <span>Advanced</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: 85%; background-color: #2ecc71;"></div>
+                </div>
+            </div>
+
+            <div class="stat-row">
+                <div class="stat-labels">
+                    <span>🇩🇪 🇯🇵 German & Japanese</span>
+                    <span>Learning</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: 25%; background-color: #3498db;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Python Script Block -->
+    <script type="py">
 from pyscript import document
 
 def run_calculator(event):
-    # 1. Grab the inputs from the HTML text boxes
     name = document.querySelector("#user-name").value
     birth_year_str = document.querySelector("#birth-year").value
     output_div = document.querySelector("#output-box")
     
-    # Validation check to make sure they typed something
     if not name or not birth_year_str:
         output_div.innerText = "Error: Please enter both your name and birth year!"
         return
@@ -345,7 +407,6 @@ def run_calculator(event):
     current_year = 2026
     age = current_year - birth_year
     
-    # 2. Build the output text using your logic blocks
     result = f"---------------------------------------\n"
     result += f"Hello, {name}! Welcome to the program.\n"
     result += f"Based on your birth year, you are turning {age} years old in 2026!\n"
@@ -359,79 +420,20 @@ def run_calculator(event):
         
     result += f"---------------------------------------"
     
-    # 3. Print it directly into the HTML output box
     output_div.innerText = result
-  </script>
-</div>
-    </div>
-    <div class="card">
-        <h2>some random knowledge i have</h2>
-        <ol style="text-align: left; margin-left: 20px; line height: 1.8; color: #8b949e;">
-        <li><strong>Hardware Guide:</strong> I know my way around an HP EliteBook 840 G3!</li>
-        <li><strong>Can effectively fix and debug a phone</strong></li>
-        <li><strong>Upcoming chess grandmaster[elo-713]</strong></li>
-        <li><strong>Enjoy's photography and videography</strong></li>
-        <li><strong>PRO Bloodstrike player[fps shooter game]</strong></li>
-        </ol>
-        <h2 style="margin-top: 35px; color: #58a6ff; font-size: 1.6rem;">My Skill & Rank Dashboard</h2>
-<div class="stats-container">
+    </script>
 
-  <div class="stat-row">
-    <div class="stat-labels">
-      <span>♟️ Chess Elo</span>
-      <span>713 / 1500</span>
-    </div>
-    <div class="progress-bar-bg">
-      <div class="progress-bar-fill" style="width: 47%; background-color: #f1c40f;"></div>
-    </div>
-  </div>
-
-  <div class="stat-row">
-    <div class="stat-labels">
-      <span>🎮 Bloodstrike Rank</span>
-      <span>Legend Rank</span>
-    </div>
-    <div class="progress-bar-bg">
-      <div class="progress-bar-fill" style="width: 90%; background-color: #e74c3c;"></div>
-    </div>
-  </div>
-
-  <div class="stat-row">
-    <div class="stat-labels">
-      <span>🌍 Swahili & English Literature</span>
-      <span>Advanced</span>
-    </div>
-    <div class="progress-bar-bg">
-      <div class="progress-bar-fill" style="width: 85%; background-color: #2ecc71;"></div>
-    </div>
-  </div>
-
-  <div class="stat-row">
-    <div class="stat-labels">
-      <span>🇩🇪 🇯🇵 German & Japanese</span>
-      <span>Learning</span>
-    </div>
-    <div class="progress-bar-bg">
-      <div class="progress-bar-fill" style="width: 25%; background-color: #3498db;"></div>
-    </div>
-  </div>
-
-</div>
-    </div>
-<script>
-    function toggleTheme() {
-      // Toggle the .light-mode class on the body element
-      document.body.classList.toggle('light-mode');
-      
-      const button = document.getElementById('theme-toggle');
-      
-      // Update the button text depending on which mode is active
-      if (document.body.classList.contains('light-mode')) {
-        button.innerHTML = "🌙 Dark Mode";
-      } else {
-        button.innerHTML = "☀️ Light Mode";
-      }
-    }
-  </script>
+    <!-- Theme Toggle Script -->
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+            const button = document.getElementById('theme-toggle');
+            if (document.body.classList.contains('light-mode')) {
+                button.innerHTML = "🌙 Dark Mode";
+            } else {
+                button.innerHTML = "☀️ Light Mode";
+            }
+        }
+    </script>
 </body>
 </html>
